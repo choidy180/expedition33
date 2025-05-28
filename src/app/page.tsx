@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import Header from "./components/Header";
 import { useEffect } from "react";
 import AOS from 'aos';
 import ContentBox1 from "./components/ContentBox1";
@@ -12,7 +11,7 @@ export default function Home() {
     },[])
     return (
         <Container>
-            <Header/>
+            {/* <Header/> */}
             <ContentBox1/>
 
         </Container>
