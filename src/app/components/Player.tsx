@@ -1,16 +1,14 @@
  "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { PiVinylRecordFill } from "react-icons/pi";
 import styled from "styled-components";
-import button from '@/../images/header/ButtonBG.avif'
 
 const Player = () => {
-    const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState<boolean>(false);
     return (
         <PlayerButton>
-            <button>
+            <button onClick={()=> setIsPlaying(!isPlaying)}>
                 {isPlaying ? "일시정지" : "재생"}
             </button>
             <PiVinylRecordFill /><span>Player</span>
